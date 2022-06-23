@@ -137,11 +137,11 @@ The following file header is the used for .NET Core. Please use it for new files
 // {fileName}
 //
 // Author:
-//      {author}
+//      LuzFaltex Contributors
 //
 // ISC License
 //
-// Copyright (c) {year} {LuzFaltex}
+// Copyright (c) {year} LuzFaltex
 //
 // This program is free software: you can redistribute it and\/or modify
 // it under the terms of the GNU Affero General Public License as published by
