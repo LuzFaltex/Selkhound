@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:  
+  - name: Questions and Discussions
+    url: https://github.com/Selkhound/Selkhound/discussions
+    about: Please use discussions rather than issues for questions or comments unrelated to a specific bug or feature request.
+  - name: Discord
+    url: https://discord.gg/wbTdQu8BwR
+    about: Joint the official Selkhound Discord
