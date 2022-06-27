@@ -1,0 +1,51 @@
+name: Feature Proposal
+description: Suggest a change or an additional feature without an API specification.
+title: "[Feature Proposal]: "
+labels: [feature-suggestion]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We welcome feature proposals! We have a process to evaluate the value and shape of new proposals. This template will help us gather the information we need to start the review process.
+  - type: textarea
+    id: background
+    attributes:
+      label: Background and motivation
+      description: Please describe the reason behind this change and the value it would add.
+      placeholder: Purpose
+      value: |
+        Embeds allow for displaying information from bots, webhooks, or directly from websites (for example, youtube) in a way that stands out.
+    validations:
+      required: true
+  - type: textarea
+    id: feature-proposal
+    attributes:
+      label: Feature Proposal
+      description: |
+        Please provide the specifics on how the feature should be implemented.
+      placeholder: Function and Form
+      value: |
+        Embeds should be displayed with a darker framed box with specific fields, such as a title, a text body, and a content field for images or videos.
+    validations:
+      required: true
+  - type: textarea
+    id: usage
+    attributes:
+      label: Usage
+      description: |
+        Provide an example of how this feature or change is meant to be used. 
+      placeholder: API usage
+      value: |
+        * A user sends a youtube link. The youtube video is embedded into the conversation for easy viewing from within the client.
+        * A bot sends a message requiring user attention. The embed allows the message to stand out.
+    validations:
+      required: true
+  - type: textarea
+    id: other-notes
+    attributes:
+      label: Other Notes
+      description: |
+        Do you have any other thoughts or concerns? This is also a good place for noting any risks, such as breaking changes or performance regressions, or describing edge case situations.
+      placeholder: Several people are typing...
+    validations:
+      required: false
