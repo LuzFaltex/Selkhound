@@ -1,6 +1,6 @@
-name: Feature Suggestion
-description: Propose a change or addition.
-title: "[Feature Proposal]: "
+name: API Proposal
+description: Suggest a change or addition to the software API.
+title: "[API Proposal]: "
 labels: [feature-suggestion]
 body:
   - type: markdown
