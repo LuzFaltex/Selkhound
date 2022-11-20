@@ -1,6 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selkhound.API.Abstractions", "Selkhound.API.Abstractions\Selkhound.API.Abstractions.csproj", "{94900AE6-65AF-419C-8039-87662FC926A2}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Selkhound.API.Abstractions", "src\Selkhound.API.Abstractions\Selkhound.API.Abstractions.csproj", "{656626E6-C7AF-4F7B-BF2E-D046A94A9F7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selkhound.Client", "src\Selkhound.Client\Selkhound.Client.csproj", "{226AE5F7-BD82-4EE9-B239-D40FCBCB21C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selkhound.Client.Web.BackEnd", "src\Selkhound.Client.Web.BackEnd\Selkhound.Client.Web.BackEnd.csproj", "{97CD4AD9-CD3D-41B0-AE43-B576FDE4C210}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selkhound.Client.Web", "src\Selkhound.Client.Web\Selkhound.Client.Web.csproj", "{632D4688-685F-4D72-A843-3AB3D37B4867}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selkhound.Server", "src\Selkhound.Server\Selkhound.Server.csproj", "{9BA8B23A-630C-45E5-94CA-3C62BF0A33EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +19,33 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{94900AE6-65AF-419C-8039-87662FC926A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94900AE6-65AF-419C-8039-87662FC926A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{94900AE6-65AF-419C-8039-87662FC926A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{94900AE6-65AF-419C-8039-87662FC926A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{656626E6-C7AF-4F7B-BF2E-D046A94A9F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656626E6-C7AF-4F7B-BF2E-D046A94A9F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656626E6-C7AF-4F7B-BF2E-D046A94A9F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656626E6-C7AF-4F7B-BF2E-D046A94A9F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226AE5F7-BD82-4EE9-B239-D40FCBCB21C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226AE5F7-BD82-4EE9-B239-D40FCBCB21C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226AE5F7-BD82-4EE9-B239-D40FCBCB21C5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{226AE5F7-BD82-4EE9-B239-D40FCBCB21C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226AE5F7-BD82-4EE9-B239-D40FCBCB21C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226AE5F7-BD82-4EE9-B239-D40FCBCB21C5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{97CD4AD9-CD3D-41B0-AE43-B576FDE4C210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97CD4AD9-CD3D-41B0-AE43-B576FDE4C210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97CD4AD9-CD3D-41B0-AE43-B576FDE4C210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97CD4AD9-CD3D-41B0-AE43-B576FDE4C210}.Release|Any CPU.Build.0 = Release|Any CPU
+		{632D4688-685F-4D72-A843-3AB3D37B4867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{632D4688-685F-4D72-A843-3AB3D37B4867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{632D4688-685F-4D72-A843-3AB3D37B4867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{632D4688-685F-4D72-A843-3AB3D37B4867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BA8B23A-630C-45E5-94CA-3C62BF0A33EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BA8B23A-630C-45E5-94CA-3C62BF0A33EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BA8B23A-630C-45E5-94CA-3C62BF0A33EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BA8B23A-630C-45E5-94CA-3C62BF0A33EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05121C32-2FF8-4E12-B22C-E4B2C0CA2DD7}
 	EndGlobalSection
 EndGlobal
