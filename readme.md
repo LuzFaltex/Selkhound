@@ -22,7 +22,7 @@ For Android and iOS, links to the store builds are below the table.
 |  Platform   |   Compatibility    |       Min Version        | Recommended Version  |                  Download                  |
 |-------------|--------------------|--------------------------|----------------------|--------------------------------------------|
 | iOS         | :white_check_mark: | 14.2                     | Latest               |                                            |
-| MacCatalyst | :white_check:mark: | 14.0                     | Latest               |                                            |
+| MacCatalyst | :white_check_mark: | 14.0                     | Latest               |                                            |
 | Android     | :white_check_mark: | Android 9 (API 28 - Pie) | Android 13 (API 33)  |                                            |
 | Windows     | :white_check_mark: | Windows 10.0.17763.0     | Windows 10.0.17763.0 |                                            |
 | Linux       | Experimental       |                          |                      |                                            |
