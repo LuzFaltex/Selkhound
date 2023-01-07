@@ -12,13 +12,6 @@ Our design goals include:
 * Extensible through plugin API to allow for third party integrations, such as OAuth.
 * Documented and version controlled API using SEMVER.
 
-<<<<<<< HEAD
-# Projects
-
-Selkhound.API - Provides default concrete types for the API. Also used by the internal API.
-Selkhound.API.Abstractions - Provides abstractions for the Selkhound API.
-Selkhound.Server - The base server runtime with the REST API.
-=======
 ## Client Compatibility
 
 The below chart tracks the current client compatibility for the official Selkhound client, as well as containing download links to the raw executables.
@@ -46,6 +39,5 @@ If you would like to install the beta client, please use the download links loca
 - **Selkhound.API.Abstractions** holds common gRPC definitions for the server and client.
 - **Selkhound.Client** is the primary client application for iOS, MacOS, Android, and Windows, with experimental support for Linux using GTK#. This is a [MAUI Blazor](https://learn.microsoft.com/en-us/shows/xamarinshow/introduction-to-net-maui-blazor--the-xamarin-show) application which shares content with the web client.
 - **Selkhound.Client.Web** is the web portal. This is a Blazor WASM app, which means it is **not compatible with IE11**. Please use a modern browser.
-- **Selkhound.Client.Web.BackEnd** is a class library which holds all Blazor Areas, Views, View Models, and other web components such as stylesheets and Javascript components. This provides a unified back-end for both the client and web portal.
+- **Selkhound.Client.Shared** is a class library which holds all Blazor Areas, Views, View Models, and other web components such as stylesheets and Javascript components. This provides a unified back-end for both the client and web portal.
 - **Selkhound.Server** is a headless gRPC API which represents the entirety of the server back-end. This can be run stand-alone or clustered, such as behind a load balancer.
->>>>>>> 3fe411e0fe526bfe654c018b3f168390f88f1a9f
