@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.1;net6.0</TargetFrameworks>
+    </PropertyGroup>
+    
+    <!-- NuGet Metadata -->
+    <PropertyGroup>
+        <Version>0.1.0</Version>
+        <Description>Interface definitions of Selkhound's APIs.</Description>
+        <PackageReleaseNotes>
+            Initial release.
+        </PackageReleaseNotes>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="OneOf" Version="3.0.223" />
+      <PackageReference Include="Remora.Rest.Core" Version="2.0.2" />
+      <PackageReference Include="Remora.Results" Version="7.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Gateway" />
+      <Folder Include="Rest" />
+    </ItemGroup>
+
+</Project>

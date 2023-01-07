@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <!-- NuGet Metadata -->
+    <PropertyGroup>
+        <Version>0.1.0</Version>
+        <Description>Default concrete types for Selkhound's APIs.</Description>
+        <PackageReleaseNotes>
+            Initial Release.
+        </PackageReleaseNotes>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Selkhound.API.Abstractions\Selkhound.API.Abstractions.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Objects\Users" />
+    </ItemGroup>
+
+</Project>
