@@ -1,5 +1,5 @@
 ﻿//
-//  IDirectMessageChannel.cs
+//  IUser.cs
 //
 //  Author:
 //       LuzFaltex Contributors
@@ -22,18 +22,38 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-using System.Collections.Generic;
+using Remora.Rest.Core;
 
 namespace Selkhound.API.Abstractions.Objects
 {
     /// <summary>
-    /// Represents a private message channel among two or more users.
+    /// Represents a Selkhound user.
     /// </summary>
-    public interface IDirectMessageChannel
+    public interface IUser
     {
         /// <summary>
-        /// Represents a list of users who are members of the Direct Message channel.
+        /// Gets the unique id of the user.
         /// </summary>
-        public IReadOnlyList<IUser> Recipients { get; }
+        Snowflake Id { get; }
+
+        /// <summary>
+        /// Gets the username of the user. This is unique per domain.
+        /// </summary>
+        string Username { get; }
+
+        /// <summary>
+        /// Gets the domain name of the Home Server the user belongs to.
+        /// </summary>
+        string HomeServerDomain { get; }
+
+        /// <summary>
+        /// Gets the user's avatar hash.
+        /// </summary>
+        IImageHash? Avatar { get; }
+
+        /// <summary>
+        /// Gets the user's email address.
+        /// </summary>
+        Verified<string>? Email { get; }
     }
 }

@@ -1,5 +1,5 @@
-﻿//
-//  IChannelCategory.cs
+//
+//  GreeterService.cs
 //
 //  Author:
 //       LuzFaltex Contributors
@@ -22,25 +22,32 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-using System.Collections.Generic;
-using JetBrains.Annotations;
+using Grpc.Core;
+using Selkhound.Server;
 
-namespace Selkhound.API.Abstractions.Objects
+// This is a sample file that will soon be deleted.
+#pragma warning disable CS1591, SA1600
+
+namespace Selkhound.Server.Services
 {
-    /// <summary>
-    /// Represents a category in which channels are held.
-    /// </summary>
-    [PublicAPI]
-    public interface IChannelCategory
+    public class GreeterService : Greeter.GreeterBase
     {
-        /// <summary>
-        /// Gets a list of text channels contained in this category.
-        /// </summary>
-        public IReadOnlyList<IClubChannel> ClubChannels { get; }
+        private readonly ILogger<GreeterService> _logger;
 
-        /// <summary>
-        /// Gets a list of voice channels contained in this category.
-        /// </summary>
-        public IReadOnlyList<IVoiceChannel> VoiceChannels { get; }
+        public GreeterService(ILogger<GreeterService> logger)
+        {
+            _logger = logger;
+        }
+
+        public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
+        {
+            return Task.FromResult
+            (
+                new HelloReply
+                {
+                    Message = "Hello " + request.Name
+                }
+            );
+        }
     }
 }

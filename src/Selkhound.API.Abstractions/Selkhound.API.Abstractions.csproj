@@ -9,7 +9,7 @@
         <Version>0.1.0</Version>
         <Description>Interface definitions of Selkhound's APIs.</Description>
         <PackageReleaseNotes>
-            
+            Initial release.
         </PackageReleaseNotes>
     </PropertyGroup>
 

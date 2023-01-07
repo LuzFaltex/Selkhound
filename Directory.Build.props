@@ -1,9 +1,27 @@
 <Project>
 	
   <PropertyGroup>
-    <Authors>LuzFaltex Contributors</Authors>
+    <Title>$(AssemblyName)</Title>
+    <Authors>Selkhound Contributors</Authors>
     <Company>LuzFaltex</Company>
     <Copyright>Copyright LuzFaltex © $([System.DateTime]::Now.Year.ToString()). All rights reserved.</Copyright>
+    <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+
+    <InlcudeSymbols>true</InlcudeSymbols>
+    <IncludeSource>true</IncludeSource>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <EmbedAllSources>true</EmbedAllSources>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <RepositoryUrl>https://github.com/Selkhound/Selkhound</RepositoryUrl>
+    <RepositoryBranch>main</RepositoryBranch>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)nuget</PackageOutputPath>
+    <PackageProjectUrl>https://github.com/Selkhound/Selkhound</PackageProjectUrl>
+    <PackageTags>Selkhound;LuzFaltex;bot;api</PackageTags>
+    <PackageIcon>Selkhound.png</PackageIcon>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -76,10 +94,35 @@
     </AdditionalFiles>
   </ItemGroup>
 
+  <!-- Analyzers -->
   <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.376" PrivateAssets="all" />
-    <PackageReference Include="JetBrains.Annotations" Version="2021.3.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435" PrivateAssets="all" />
+    <PackageReference Include="Remora.Results.Analyzers" Version="1.0.0-preview3" PrivateAssets="all" />
   </ItemGroup>
 
+  <!-- JetBrains -->
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" />
+  </ItemGroup>
+
+  <!-- SourceLink -->
+  <ItemGroup Condition="$(IsPackable)">
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1." />
+  </ItemGroup>
+
+  <!-- NuGet Icon -->
+  <ItemGroup Condition="$(IsPackable)">
+    <None Include="$(MSBuildThisFileDirectory)images/selkhound.png" Pack="true" PackagePath="/">
+      <Link>selkhound.png</Link>
+      <InProject>false</InProject>
+    </None>
+  </ItemGroup>
+
+  <!-- NuGet Readme -->
+  <ItemGroup Condition="$(IsPackable)">
+    <None Include="$(MSBuildThisFileDirectory)readme.md" Pack="true" PackagePath="/">
+      <link>readme.md</link>
+    </None>
+  </ItemGroup>
 
 </Project>

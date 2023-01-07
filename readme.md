@@ -11,3 +11,9 @@ Our design goals include:
 * Role-based Access Control.
 * Extensible through plugin API to allow for third party integrations, such as OAuth.
 * Documented and version controlled API using SEMVER.
+
+# Projects
+
+Selkhound.API - Provides default concrete types for the API. Also used by the internal API.
+Selkhound.API.Abstractions - Provides abstractions for the Selkhound API.
+Selkhound.Server - The base server runtime with the REST API.

@@ -1,5 +1,5 @@
 ﻿//
-//  IEmailAddress.cs
+//  IPinnedMessage.cs
 //
 //  Author:
 //       LuzFaltex Contributors
@@ -23,26 +23,29 @@
 //
 
 using JetBrains.Annotations;
+using Remora.Rest.Core;
 
 namespace Selkhound.API.Abstractions.Objects
 {
     /// <summary>
-    /// Represents an email address.
+    /// Represents a pinned message in a channel.
     /// </summary>
     [PublicAPI]
-    public interface IEmailAddress
+    public interface IPinnedMessage
     {
         /// <summary>
-        /// Gets the email address assigned to the object.
+        /// Gets the unique id of the message.
         /// </summary>
-        /// <remarks>
-        /// Described by <see href="https://tools.ietf.org/html/rfc2822#section-3.4.1"/>.
-        /// </remarks>
-        string Email { get; }
+        Snowflake MessageId { get; }
 
         /// <summary>
-        /// Gets a value indicating whether the user has verified their email.
+        /// Gets the unique id of the channel.
         /// </summary>
-        bool IsVerified { get; }
+        Snowflake ChannelId { get; }
+
+        /// <summary>
+        /// Gets the unique id of the club.
+        /// </summary>
+        Snowflake ClubId { get; }
     }
 }

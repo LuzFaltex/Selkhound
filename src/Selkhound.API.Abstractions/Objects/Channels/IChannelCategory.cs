@@ -1,5 +1,5 @@
 ﻿//
-//  IUser.cs
+//  IChannelCategory.cs
 //
 //  Author:
 //       LuzFaltex Contributors
@@ -22,38 +22,40 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+using System.Collections.Generic;
+using JetBrains.Annotations;
+using OneOf;
 using Remora.Rest.Core;
 
 namespace Selkhound.API.Abstractions.Objects
 {
     /// <summary>
-    /// Represents a Selkhound user.
+    /// Represents a category in which channels are held.
     /// </summary>
-    public interface IUser
+    [PublicAPI]
+    public interface IChannelCategory
     {
         /// <summary>
-        /// Gets the unique id of the user.
+        /// Gets a reference to this category's parent.
         /// </summary>
-        Snowflake Id { get; }
+        /// <remarks>
+        /// This field will be omitted for top-level categories where <see cref="Depth"/> is <c>0</c>.
+        /// </remarks>
+        Optional<IChannelCategory> ParentCategory { get; }
 
         /// <summary>
-        /// Gets the username of the user. This is unique per domain.
+        /// Gets the layer on the tree this category belongs to.
         /// </summary>
-        string Username { get; }
+        int Depth { get; }
 
         /// <summary>
-        /// Gets the domain the user belongs to.
+        /// Gets a list of text channels contained in this category.
         /// </summary>
-        string Domain { get; }
+        IReadOnlyList<OneOf<IChannelCategory, IClubChannel>> ClubChannels { get; }
 
         /// <summary>
-        /// Gets the user's avatar hash.
+        /// Gets a list of voice channels contained in this category.
         /// </summary>
-        IImageHash? Avatar { get; }
-
-        /// <summary>
-        /// Gets the user's email address.
-        /// </summary>
-        IEmailAddress? Email { get; }
+        IReadOnlyList<IVoiceChannel> VoiceChannels { get; }
     }
 }

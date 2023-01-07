@@ -1,5 +1,5 @@
 ﻿//
-//  IPinnedMessage.cs
+//  SelkhoundContext.cs
 //
 //  Author:
 //       LuzFaltex Contributors
@@ -22,30 +22,33 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-using JetBrains.Annotations;
-using Remora.Rest.Core;
+using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 
-namespace Selkhound.API.Abstractions.Objects
+namespace Selkhound.Server
 {
     /// <summary>
-    /// Represents a pinned message in a channel.
+    /// Provides the database context for Selkhound.
     /// </summary>
-    [PublicAPI]
-    public interface IPinnedMessage
+    public sealed class SelkhoundContext : DbContext
     {
         /// <summary>
-        /// Gets the unique id of the message.
+        /// Initializes a new instance of the <see cref="SelkhoundContext"/> class.
         /// </summary>
-        Snowflake MessageId { get; }
+        /// <param name="contextOptions">
+        /// The <see cref="DbContextOptions{TContext}"/> for building this instance.
+        /// </param>
+        public SelkhoundContext(DbContextOptions<SelkhoundContext> contextOptions)
+            : base(contextOptions)
+        {
+            // Body left intentionally blank.
+        }
 
-        /// <summary>
-        /// Gets the unique id of the channel.
-        /// </summary>
-        Snowflake ChannelId { get; }
-
-        /// <summary>
-        /// Gets the unique id of the club
-        /// </summary>
-        Snowflake ClubId { get; }
+        /// <inheritdoc />
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
