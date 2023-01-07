@@ -32,8 +32,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Selkhound.API\Selkhound.API.csproj" />
-      <ProjectReference Include="..\src\Selkhound.API.Abstractions\Selkhound.API.Abstractions.csproj" />
-      <ProjectReference Include="..\src\Selkhound.API\Selkhound.API.csproj" />
+      <ProjectReference Include="..\Selkhound.API.Abstractions\Selkhound.API.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>
